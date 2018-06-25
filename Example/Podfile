@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KTExpandableView_Example' do
+  pod 'KTExpandableView', :path => '../'
+
+  target 'KTExpandableView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
