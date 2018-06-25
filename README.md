@@ -22,7 +22,7 @@ pod 'KTExpandableView'
 
 ## Author
 
-Krishna Kumar, krishna@pioctave.com
+Krishna Kumar, thakurkrishna1991@gmail.com
 
 ## License
 
