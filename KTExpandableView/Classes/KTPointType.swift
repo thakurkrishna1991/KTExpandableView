@@ -27,7 +27,7 @@
 
 import Foundation
 
-enum KTPointType {
+ enum KTPointType {
     case major
     case minor
 }

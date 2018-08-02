@@ -27,7 +27,7 @@
 
 import Foundation
 
-class KTRegion:UIBezierPath{
+ class KTRegion:UIBezierPath{
     
     var _pointViewArray = [KTPointView]()
     var _shapeLayer = CAShapeLayer()
@@ -144,7 +144,7 @@ class KTRegion:UIBezierPath{
     }
     
     
-    func draw(){
+    public func draw(){
         for pointView in _pointViewArray{
             context.addSubview(pointView)
             print(pointView.center)
@@ -156,7 +156,7 @@ class KTRegion:UIBezierPath{
         _shapeLayer.fillColor = primary.cgColor
         _shapeLayer.lineWidth = 1
         _shapeLayer.path = self.cgPath
-        _shapeLayer.lineCap = CAShapeLayerLineCap.round
+        _shapeLayer.lineCap = convertToCAShapeLayerLineCap("round")
         _shapeLayer.sublayers?.removeAll()
         context.layer.addSublayer(_shapeLayer)
     }
@@ -187,4 +187,9 @@ class KTRegion:UIBezierPath{
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAShapeLayerLineCap(_ input: String) -> CAShapeLayerLineCap {
+	return CAShapeLayerLineCap(rawValue: input)
 }

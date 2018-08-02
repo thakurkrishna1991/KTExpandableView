@@ -28,10 +28,10 @@
 import Foundation
 import UIKit
 
-class KTPointView:UIControl{
+ class KTPointView:UIControl{
     
     let MAJOR_POINT_SIZE:CGFloat = 17.0
-    let MINOR_POINT_SIZE:CGFloat = 17.0
+    let MINOR_POINT_SIZE:CGFloat = 13.0
     var touchStart:CGPoint?
     var type :KTPointType!
     var touchEndCallback = { (pointView: KTPointView) -> Void in }
@@ -67,7 +67,7 @@ class KTPointView:UIControl{
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event);
         for touch: AnyObject in touches {
             touchBeganCallback(self)
@@ -76,7 +76,7 @@ class KTPointView:UIControl{
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.touchStart = nil
         let touch = touches.first
         let location : CGPoint = (touch?.location(in: self))!

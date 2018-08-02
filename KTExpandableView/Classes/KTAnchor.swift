@@ -27,7 +27,12 @@
 
 import Foundation
 
-struct KTAnchor{
+ struct KTAnchor{
     let point:CGPoint
     let type:KTPointType
+    
+     init(point:CGPoint, type:KTPointType){
+        self.point = point
+        self.type = type
+    }
 }
