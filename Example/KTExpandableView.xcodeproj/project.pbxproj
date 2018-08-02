@@ -40,10 +40,10 @@
 		607FACE51AFB9204008FA782 /* KTExpandableView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTExpandableView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		76D5FE9FC5EE14B34161540C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BBF4C9CCA8258E8D370FAE13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		76D5FE9FC5EE14B34161540C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BBF4C9CCA8258E8D370FAE13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E12B69865902D50C04462EFE /* Pods-KTExpandableView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTExpandableView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KTExpandableView_Example/Pods-KTExpandableView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E486AC409B1B7E66BABB049E /* KTExpandableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KTExpandableView.podspec; path = ../KTExpandableView.podspec; sourceTree = "<group>"; };
+		E486AC409B1B7E66BABB049E /* KTExpandableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KTExpandableView.podspec; path = ../KTExpandableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E85244F15465C8C704599FAF /* Pods_KTExpandableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KTExpandableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F663BB8ECED256A2A452FBE0 /* Pods-KTExpandableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTExpandableView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTExpandableView_Tests/Pods-KTExpandableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8FB382FCC90F7EEA31C74C /* Pods-KTExpandableView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTExpandableView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTExpandableView_Example/Pods-KTExpandableView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,8 +170,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				F5949D2E9CE734A42032A49C /* [CP] Embed Pods Frameworks */,
-				186308A67C86116B1AD0B8E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,8 +188,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				B737DEE1DF8704FD3F544CA8 /* [CP] Embed Pods Frameworks */,
-				8FEFF4353788DBCE7ADF3B8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,21 +278,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		186308A67C86116B1AD0B8E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTExpandableView_Example/Pods-KTExpandableView_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		61B2262E629A5FB72D0E0DA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,54 +294,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8FEFF4353788DBCE7ADF3B8F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTExpandableView_Tests/Pods-KTExpandableView_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B737DEE1DF8704FD3F544CA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTExpandableView_Tests/Pods-KTExpandableView_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5949D2E9CE734A42032A49C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KTExpandableView_Example/Pods-KTExpandableView_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KTExpandableView/KTExpandableView.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTExpandableView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTExpandableView_Example/Pods-KTExpandableView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

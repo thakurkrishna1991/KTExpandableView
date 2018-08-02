@@ -1,5 +1,5 @@
 //
-//  KTRegion.swift
+//  KTAnchor.swift
 //  KTExpandableView
 //
 //  Created by Krishna  Thakur on 25/06/18.
@@ -27,6 +27,7 @@
 
 import Foundation
 
-class KTRegion:UIBezierPath{
-       
+struct KTAnchor{
+    let point:CGPoint
+    let type:KTPointType
 }

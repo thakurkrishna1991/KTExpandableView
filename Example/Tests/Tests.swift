@@ -1,5 +1,5 @@
 import XCTest
-import KTExpandableView
+
 
 class Tests: XCTestCase {
     
